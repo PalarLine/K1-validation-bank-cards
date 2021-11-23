@@ -14,7 +14,7 @@ let newMass = [];
         let temp = result[i];
         temp = temp.split(' ').join('').split('-').join('');
             if (luhnAlgorithm (temp) == true) {
-                temp = temp.replace(/(?=(\d{4})+(?!\d))/g, ' ');
+                temp = temp.replace(/\B(?=(\d{4})+(?!\d))/g, ' ');
                 newMass.push(temp);
             }            
       
